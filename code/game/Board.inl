@@ -2,7 +2,7 @@ namespace ne {
 
 template <typename Func>
 void Board::forEachNeighbouringIndex(std::size_t index, Func&& func) {
-    const std::size_t n = static_cast<std::size_t>(m_size.x * m_size.y);    
+    const std::size_t n = getTileCount();
     const std::size_t width = static_cast<std::size_t>(m_size.x);
     
     //State valid directions (will not error if...)
